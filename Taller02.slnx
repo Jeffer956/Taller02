@@ -1,0 +1,7 @@
+<Solution>
+  <Folder Name="/Shared/">
+    <Project Path="Shared/Shared.csproj" />
+  </Folder>
+  <Project Path="DescomposicionFactores/PrimeDecomposer.csproj" />
+  <Project Path="OperacionMatriz/MatrixOperation.csproj" />
+</Solution>
