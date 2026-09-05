@@ -9,14 +9,13 @@ public class Matrix
     // Constructors
     public Matrix()
     {
-        N = 3; 
+        N = 3;
     }
 
     public Matrix(int n)
     {
         N = n;
     }
-
 
     // Properties
     public int N
@@ -34,17 +33,21 @@ public class Matrix
     public int Max { get; private set; }
     public int Min { get; private set; }
 
-    // Public Methods
-    public void PrintMatrix()
+    // Public Methods (Devuelve el texto formateado en lugar de imprimirlo)
+    public override string ToString()
     {
+        string matrixString = string.Empty;
+
         for (int i = 0; i < _n; i++)
         {
             for (int j = 0; j < _n; j++)
             {
-                Console.Write($"{_data[i, j],-4}");
+                matrixString += $"{_data[i, j],-4}";
             }
-            Console.WriteLine();
+            matrixString += "\n";
         }
+
+        return matrixString;
     }
 
     // Private Methods

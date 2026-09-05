@@ -11,7 +11,7 @@ do
     if (n > 0)
     {
         var matrix = new OperacionMatriz.Backend.Matrix(n);
-        matrix.PrintMatrix();
+        Console.WriteLine(matrix);
 
         Console.WriteLine($"La sumatoria es: {matrix.Sum}");
         Console.WriteLine($"El valor máximo es: {matrix.Max}");
