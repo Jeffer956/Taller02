@@ -6,11 +6,6 @@ public class PrimeDecomposer
     private int _number;
 
     // Constructors
-    public PrimeDecomposer()
-    {
-        Number = 2; // Valor por defecto seguro
-    }
-
     public PrimeDecomposer(int number)
     {
         Number = number;

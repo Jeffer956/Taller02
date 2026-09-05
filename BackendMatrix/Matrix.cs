@@ -7,12 +7,7 @@ public class Matrix
     private int[,] _data;
 
     // Constructors
-    public Matrix()
-    {
-        N = 3;
-    }
-
-    public Matrix(int n)
+      public Matrix(int n)
     {
         N = n;
     }
@@ -33,7 +28,7 @@ public class Matrix
     public int Max { get; private set; }
     public int Min { get; private set; }
 
-    // Public Methods (Devuelve el texto formateado en lugar de imprimirlo)
+    // Public Methods 
     public override string ToString()
     {
         string matrixString = string.Empty;
