@@ -28,4 +28,4 @@ do
 
 } while (!answer.Equals("n", StringComparison.CurrentCultureIgnoreCase));
 
-Console.WriteLine("Game Over.");
+Console.WriteLine("Bye.");
