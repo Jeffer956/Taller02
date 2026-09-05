@@ -1,13 +1,12 @@
 ﻿using Shared;
-using OperacionMatriz;
+using OperacionMatrix.Backend;
 
 var answer = string.Empty;
 var options = new List<string> { "s", "n" };
 
 do
 {
-    Console.Clear(); // Limpia la pantalla en cada repetición
-
+    Console.Clear();
     int n = ConsoleExtension.GetInt("Ingrese orden de la matriz: ");
 
     if (n > 0)
@@ -24,7 +23,6 @@ do
         Console.WriteLine("El orden de la matriz debe ser mayor a 0.");
     }
 
-    // Validación de entrada para la respuesta [S/N]
     do
     {
         answer = ConsoleExtension.GetValidOptions("¿Deseas continuar [S]í, [N]o?: ", options);
@@ -32,4 +30,4 @@ do
 
 } while (!answer.Equals("n", StringComparison.CurrentCultureIgnoreCase));
 
-Console.WriteLine("God Bye");
+Console.WriteLine("Bye.");
