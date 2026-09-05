@@ -1,5 +1,4 @@
 ﻿using Shared;
-using OperacionMatrix.Backend;
 
 var answer = string.Empty;
 var options = new List<string> { "s", "n" };
@@ -11,7 +10,7 @@ do
 
     if (n > 0)
     {
-        var matrix = new Matrix(n);
+        var matrix = new OperacionMatriz.Backend.Matrix(n);
         matrix.PrintMatrix();
 
         Console.WriteLine($"La sumatoria es: {matrix.Sum}");

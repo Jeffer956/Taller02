@@ -1,24 +1,59 @@
-﻿namespace OperacionMatrix.Backend;
+﻿namespace OperacionMatriz.Backend;
 
 public class Matrix
 {
-    private readonly int _n;
+    // Fields
+    private int _n;
     private int[,] _data;
+
+    // Constructors
+    public Matrix()
+    {
+        N = 3; 
+    }
+
+    public Matrix(int n)
+    {
+        N = n;
+    }
+
+
+    // Properties
+    public int N
+    {
+        get => _n;
+        set
+        {
+            _n = ValidN(value);
+            _data = new int[_n, _n];
+            Calculate();
+        }
+    }
+
     public int Sum { get; private set; }
     public int Max { get; private set; }
     public int Min { get; private set; }
 
-    public Matrix(int n)
+    // Public Methods
+    public void PrintMatrix()
     {
-        _n = n;
-        _data = new int[_n, _n];
-        Max = int.MinValue;
-        Min = int.MaxValue;
-        Calculate();
+        for (int i = 0; i < _n; i++)
+        {
+            for (int j = 0; j < _n; j++)
+            {
+                Console.Write($"{_data[i, j],-4}");
+            }
+            Console.WriteLine();
+        }
     }
 
+    // Private Methods
     private void Calculate()
     {
+        Sum = 0;
+        Max = int.MinValue;
+        Min = int.MaxValue;
+
         for (int i = 0; i < _n; i++)
         {
             for (int j = 0; j < _n; j++)
@@ -32,15 +67,12 @@ public class Matrix
         }
     }
 
-    public void PrintMatrix()
+    private int ValidN(int n)
     {
-        for (int i = 0; i < _n; i++)
+        if (n <= 0)
         {
-            for (int j = 0; j < _n; j++)
-            {
-                Console.Write($"{_data[i, j],-4}");
-            }
-            Console.WriteLine();
+            throw new Exception($"The order:{n}, is not valid. Must be greater than 0.");
         }
+        return n;
     }
 }

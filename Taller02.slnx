@@ -2,6 +2,8 @@
   <Folder Name="/Shared/">
     <Project Path="Shared/Shared.csproj" />
   </Folder>
-  <Project Path="DescomposicionFactores/PrimeDecomposer.csproj" />
-  <Project Path="OperacionMatriz/MatrixOperation.csproj" />
+  <Project Path="BackendMatrix/BackendMatrix.csproj" Id="8c8f68d4-30f1-4712-bb82-90cf07b578ec" />
+  <Project Path="BackenPrimeFactors/BackenPrimeFactors.csproj" Id="2bab37b5-c88e-4a81-b1de-adad0fd148f5" />
+  <Project Path="FrontednMatrix/FrontednMatrix.csproj" Id="c1887af6-9323-4b45-b6c0-6301e3e8385b" />
+  <Project Path="FrontendPrimeFactors/FrontendPrimeFactors.csproj" Id="e43e2ec0-fde1-4045-b7fd-2e8a6de36ce2" />
 </Solution>

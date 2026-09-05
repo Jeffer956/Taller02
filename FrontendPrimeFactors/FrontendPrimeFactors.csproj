@@ -8,7 +8,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\BackendMatrix\BackendMatrix.csproj" />
+    <ProjectReference Include="..\BackenPrimeFactors\BackenPrimeFactors.csproj" />
     <ProjectReference Include="..\Shared\Shared.csproj" />
   </ItemGroup>
 
